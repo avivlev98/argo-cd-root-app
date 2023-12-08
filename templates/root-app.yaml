@@ -8,7 +8,6 @@ spec:
   project: default
   source:
     repoURL: https://github.com/avivlev98/argo-cd-root-app.git
-    path: ''
     targetRevision: HEAD
   destination:
     server: https://kubernetes.default.svc
