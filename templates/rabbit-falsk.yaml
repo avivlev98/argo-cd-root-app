@@ -1,0 +1,13 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+spec:
+  sources:
+  - repoURL: 'oci://avivacr13.azurecr.io/helm'
+    chart: common-chart
+    targetRevision: 0.0.1
+    helm:
+      valueFiles:
+      - $values/rabbit-trigger-flask/values.yaml
+  - repoURL: 'https://github.com/avivlev98/argocd-rabbitblob.git'
+    targetRevision: main
+    ref: values
