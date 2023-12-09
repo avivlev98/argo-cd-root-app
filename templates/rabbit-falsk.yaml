@@ -1,5 +1,9 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
+metadata:
+  name: rabbit-flask
+  finalizers:
+  - resources-finalizer.argocd.argoproj.io
 spec:
   sources:
   - repoURL: 'oci://avivacr13.azurecr.io/helm'
