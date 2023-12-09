@@ -15,3 +15,9 @@ spec:
   - repoURL: 'https://github.com/avivlev98/argocd-rabbitblob.git'
     targetRevision: main
     ref: values
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: argo-cd
+  syncPolicy:
+    automated:
+      selfHeal: true
